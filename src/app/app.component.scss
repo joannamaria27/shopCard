@@ -2,6 +2,7 @@ $margin-padding: 15px;
 
 .container{
     display: flex;
+    padding: $margin-padding;
 }
 
 @media screen and (max-width: 500px) {
