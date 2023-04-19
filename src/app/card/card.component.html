@@ -1,0 +1,16 @@
+<div class="col" *ngFor="let el of lists; let i = index">
+    <div class="div-text" *ngIf="((i+1)%3===2) && (!isMobile)">
+        <p class="title">{{el.title}}</p>
+        <p class="subtitle">{{el.subtitle}}</p>
+        <a class="link" href="https://www.google.com"><i class="arrow right offset">SHOP NOW</i></a>
+    </div>
+    <div class="div-image">
+        <img class="image" src="{{el.img}}">
+        <img class="image-heart" src="\assets\heart.png">
+    </div>
+    <div class="div-text" *ngIf="(i+1)%3!==2">
+        <p class="title">{{el.title}}</p>
+        <p class="subtitle">{{el.subtitle}}</p>
+        <a class="link" href="https://www.google.com"><i class="arrow right offset">SHOP NOW</i></a>
+    </div>
+</div>

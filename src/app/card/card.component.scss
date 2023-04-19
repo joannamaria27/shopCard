@@ -1,0 +1,79 @@
+$color-goldenrod: goldenrod;
+$background-color: white;
+$font-size-title: 21px;
+$font-size-subtitle: 16px;
+$font-size-link: 14px;
+$margin-heart: 30px;
+$width-heart: 20px;
+$margin-padding: 0.5vw;
+$image-width: 30vw;
+$image-height: 37vw;
+
+.col{
+    flex: 1;
+    padding: $margin-padding;
+}
+.div-image {
+    position: relative;
+    display: inline-block;
+}
+.image {
+    width: $image-width;
+    height: $image-height;
+}
+.image-heart {
+    position: absolute;
+    top: $margin-heart;
+    right: $margin-heart;
+    width: $width-heart;
+    padding: 0.5vw;
+    background-color: $background-color;
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+}
+.div-text {
+    text-align: center;
+    padding: $margin-padding;
+}
+.title {
+    font-size: $font-size-title;
+}
+.subtitle {
+    font-size: $font-size-subtitle;
+}
+.link {
+    font-size: $font-size-link;
+    text-decoration: none;
+    color: $color-goldenrod;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+    .div-image {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+    }    
+    .image {
+      width: 80vw;
+      height: 87vw;
+    }
+}
+
+.arrow::after {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    font-size: $font-size-subtitle;
+}
+.right::after {
+    content: "\2192"
+}
+.arrow.offset:hover::after {
+    color: $color-goldenrod;
+    transform: translateX(10px);
+    transition: all 0.3s;
+}
+  
+
+  
