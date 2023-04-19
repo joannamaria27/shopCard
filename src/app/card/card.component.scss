@@ -6,6 +6,7 @@ $font-size-link: 14px;
 $margin-heart: 30px;
 $width-heart: 20px;
 $margin-padding: 0.5vw;
+$margin-padding-text: 3.5vw;
 $image-width: 30vw;
 $image-height: 37vw;
 
@@ -33,7 +34,7 @@ $image-height: 37vw;
 }
 .div-text {
     text-align: center;
-    padding: $margin-padding;
+    padding: $margin-padding-text;
 }
 .title {
     font-size: $font-size-title;
@@ -51,7 +52,6 @@ $image-height: 37vw;
 
 @media screen and (max-width: 500px) {
     .col{
-        max-width: 90%;
         padding: $margin-padding;
     }
     .div-image {
@@ -62,6 +62,10 @@ $image-height: 37vw;
     .image {
       width: 80vw;
       height: 87vw;
+    }
+    .div-text {
+        text-align: center;
+        padding-bottom: 15vw;
     }
 }
 
