@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -10,12 +10,25 @@ export class CardComponent implements OnInit {
     { img: "/assets/1.png", title: "YOUR SPRING LOOK", subtitle: "Daytime dressing pure&simple" },
     { img: "/assets/2.png", title: "MODERN BUSINESS OUTFIT", subtitle: "Smart casual for you" },
     { img: "/assets/3.png", title: "NEW STREET STYLE", subtitle: "Discover the art of outdoor" },
-    //   { img: "1.png", title: "YOUR SPRING LOOK", subtitle: "Daytime dressing pure&simple" },
-    // { img: "2.png", title: "MODERN BUSINESS OUTFIT", subtitle: "Smart casual for you" },
+
   ]
+  screenMode: any;
   ngOnInit() {
-    if (window.screen.width === 500) { // 768px portrait
+    let screenWidth = window.innerWidth;
+
+    if (screenWidth > 500)
+      this.isMobile = false;
+    else
       this.isMobile = true;
-    }
+
+  }
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    let screenWidth = window.innerWidth;
+
+    if (screenWidth > 500)
+      this.isMobile = false;
+    else
+      this.isMobile = true;
   }
 }

@@ -1,18 +1,16 @@
-.grid-container {
+$margin-padding: 15px;
 
-    margin: 3%;
-}
-.right-col{
+.container{
     display: flex;
-    flex: 1;
-  }
-  @media screen and (max-width: 500px) {
+}
+
+@media screen and (max-width: 500px) {
     .image {
       width: 80vw;
       height: 87vw;
     }
-    .right-col {
+    .container {
       display: block;
+      padding: $margin-padding;
     }
-  
 }

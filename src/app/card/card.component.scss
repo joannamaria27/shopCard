@@ -46,9 +46,14 @@ $image-height: 37vw;
     text-decoration: none;
     color: $color-goldenrod;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 @media screen and (max-width: 500px) {
+    .col{
+        max-width: 90%;
+        padding: $margin-padding;
+    }
     .div-image {
         position: relative;
         display: inline-block;
